@@ -31,7 +31,7 @@ auto z = x <divmod> y; // calculates { x / y, x % y }
 You want assignment operators? Not a problem:
 
 ```c++
-std::vector<int> vec{ 1, 2, 3 };
+vector<int> vec{ 1, 2, 3 };
 vec <append>= 4;
 // same as:
 vec = vec <append> 4;
@@ -48,7 +48,7 @@ auto divmod = make_named_operator(divmod_f);
 where
 
 ```c++
-std::pair<int, int> divmod_f(int x, int y) {
+pair<int, int> divmod_f(int x, int y) {
     return { x / y, x % y };
 }
 ```
