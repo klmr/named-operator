@@ -12,7 +12,7 @@ and [here’s R](http://stat.ethz.ch/R-manual/R-patched/library/base/html/match.
 yup <- 4 %in% c(1, 2, 3, 4, 5)
 ```
 
-In fact, [C++ also has named operators](http://gcc.gnu.org/onlinedocs/cpp/C_002b_002b-Named-Operators.html) – alternative tokens for the primary ones defined in §2.6.
+In fact, [C++ also has named operators](http://gcc.gnu.org/onlinedocs/cpp/C_002b_002b-Named-Operators.html) – alternative tokens for the primary ones defined, in §2.6.
 
 But those are fixed and not redefinable. Sure, you can `#define` your own names for tokens …
 
