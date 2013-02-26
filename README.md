@@ -80,7 +80,7 @@ auto in = make_named_operator(
         return find(begin(x), end(x), i) != end(x);
     });
 
-…
+// …
 
 bool result = 24 <in> vec;
 ```
