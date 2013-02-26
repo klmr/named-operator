@@ -1,0 +1,14 @@
+syntax: glob
+*.swp
+bin/
+obj/
+.scons*
+test-results.xml
+*~
+dist/
+
+Wheels.config
+Wheels.creator
+Wheels.creator.user
+Wheels.files
+Wheels.includes
