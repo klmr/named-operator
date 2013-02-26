@@ -1,6 +1,8 @@
 #include "base/named_operator.hpp"
 #include "util/io_helpers.hpp"
 
+#include <algorithm>
+
 namespace op {
     std::pair<int, int> divmod(int x, int y) {
         return { x / y, x % y };
@@ -9,7 +11,7 @@ namespace op {
     struct append {
         template <typename T>
         std::vector<T> operator ()(std::vector<T> const& vs, T const& v) const {
-            auto copy = vs;
+            auto copy(vs);
             copy.push_back(v);
             return copy;
         }
@@ -18,6 +20,10 @@ namespace op {
 
 auto divmod = base::make_named_operator(op::divmod);
 auto append = base::make_named_operator(op::append());
+auto in = base::make_named_operator(
+    [](int i, std::vector<int> const& x) {
+        return std::find(begin(x), end(x), i) != end(x);
+    });
 
 int main() {
     int x = 42;
@@ -30,4 +36,8 @@ int main() {
     as <append>= 4;
 
     std::cout << as << '\n';
+
+    std::cout << std::boolalpha;
+    std::cout << "3 in " << as << ": " << (3 <in> as) << '\n'
+              << "5 in " << as << ": " << (5 <in> as) << '\n';
 }
