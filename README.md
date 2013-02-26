@@ -25,14 +25,16 @@ Take a look at this fully valid, compiling and running C++ code:
 ```c++
 int x = 42;
 int y = 23;
-auto z = x <divmod> y;
+auto z = x <divmod> y; // calculates { x / y, x % y }
 ```
 
 You want assignment operators? Not a problem:
 
 ```c++
-std::vector<int> as{ 1, 2, 3 };
-as <append>= 4;
+std::vector<int> vec{ 1, 2, 3 };
+vec <append>= 4;
+// same as:
+vec = vec <append> 4;
 ```
 
 ## Definition

@@ -32,12 +32,10 @@ int main() {
 
     std::cout << z << '\n';
 
-    std::vector<int> as{ 1, 2, 3 };
-    as <append>= 4;
-
-    std::cout << as << '\n';
+    std::vector<int> vec{ 1, 2, 3 };
+    vec <append>= 4;
 
     std::cout << std::boolalpha;
-    std::cout << "3 in " << as << ": " << (3 <in> as) << '\n'
-              << "5 in " << as << ": " << (5 <in> as) << '\n';
+    std::cout << "3 in " << vec << ": " << (3 <in> vec) << '\n'
+              << "5 in " << vec << ": " << (5 <in> vec) << '\n';
 }
