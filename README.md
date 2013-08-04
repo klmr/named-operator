@@ -1,5 +1,24 @@
 # Named operators
 
+## tl;dr
+
+The following code is legal C++ and does exactly what you’d expect it to do.
+
+```c++
+auto result = "Hello" <repeat> 3 <join> ", ";
+std::cout << result << '\n';
+```
+
+Output:
+
+```
+Hello, Hello, Hello
+```
+
+This project explains how.
+
+## Background
+
 Named operators are (user-defined) operators which have names rather than symbols. Here’s Haskell:
 
 ```haskell
