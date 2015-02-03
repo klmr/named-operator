@@ -2,6 +2,9 @@
 #include "util/io_helpers.hpp"
 
 #include <algorithm>
+#include <iomanip>
+#include <vector>
+#include <utility>
 
 namespace op {
     std::pair<int, int> divmod(int x, int y) {
