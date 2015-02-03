@@ -2,9 +2,9 @@
 #define UTIL_IO_HELPERS_HPP
 
 #include <iostream>
+#include <type_traits>
 #include <vector>
 #include <utility>
-#include <wheels/meta.h++>
 
 namespace util {
 
@@ -21,7 +21,8 @@ inline std::ostream& operator <<(std::ostream& out, std::pair<T, T> const& rhs) 
     return out << '<' << rhs.first << ", " << rhs.second << '>';
 }
 
-template <typename C, wheels::EnableIf<util::is_container<C>>...>
+template <typename C,
+          typename = typename std::enable_if<util::is_container<C>::value>::type>
 inline std::ostream& operator <<(std::ostream& out, C const& rhs) {
     out << '[';
     bool first = true;
