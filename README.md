@@ -42,8 +42,7 @@ But this has all the usual disadvantages of macros and limits you to the already
 Take a look at this fully valid, macro-free, compiling and running C++ code:
 
 ```c++
-int x = 42;
-int y = 23;
+int x = 42,y=23;
 auto z = x <divmod> y; // calculates { x / y, x % y }
 ```
 
