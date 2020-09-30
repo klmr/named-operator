@@ -9,7 +9,7 @@
 namespace op {
     std::pair<int, int> divmod(int x, int y) {
         return { x / y, x % y };
-    }
+    }//If we don't want to to write std:: everytime then we can include "using namespace std"
 
     struct append {
         template <typename T>
