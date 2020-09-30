@@ -1,4 +1,4 @@
-# Named operators
+# Named operators in C++
 
 ## tl;dr
 
